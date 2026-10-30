@@ -69,8 +69,7 @@ export default function Footer() {
 
       <div className="relative border-t border-pearl/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-pearl/80 sm:flex-row sm:px-8">
-          {/* pr-16 no celular: o botão flutuante do WhatsApp não cobre o texto */}
-          <p className="pr-16 sm:pr-0">
+          <p>
             © {year} Harmonia Estética Avançada. Todos os direitos reservados.
             <span className="ml-2 text-pearl/65">Imagens ilustrativas.</span>
           </p>
