@@ -19,6 +19,12 @@ const sans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  // Endereço oficial do site, usado para montar o link absoluto da imagem de pré-visualização.
+  // Defina NEXT_PUBLIC_SITE_URL (ex.: https://www.clinica.com.br) quando houver domínio próprio.
+  // Sem ele, na Vercel o Next usa o endereço do próprio deploy.
+  metadataBase: process.env.NEXT_PUBLIC_SITE_URL
+    ? new URL(process.env.NEXT_PUBLIC_SITE_URL)
+    : undefined,
   title: "Harmonia Estética Avançada | Clínica de Estética em Curitiba",
   description:
     "Conheça a Harmonia Estética Avançada em Santa Felicidade, Curitiba. Tratamentos faciais e corporais com cuidado personalizado. Agende sua avaliação.",

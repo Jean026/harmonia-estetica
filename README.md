@@ -25,6 +25,14 @@ Tudo fica em `src/data/site.ts`:
 - **Depoimentos**: `testimonialsConfig.show = false` oculta a seção; troque os textos de exemplo por depoimentos reais.
 - **Crédito do desenvolvedor** no rodapé: `developerCredit`.
 
+## Imagem de pré-visualização (WhatsApp, Instagram, Facebook, X)
+
+`src/app/opengraph-image.jpg` (e a cópia `twitter-image.jpg`), 1200×630. O Next gera as tags sozinho.
+Para trocar: substitua os dois arquivos e ajuste o texto alternativo em `*.alt.txt`.
+Com domínio próprio, defina a variável `NEXT_PUBLIC_SITE_URL` na Vercel (Settings → Environment Variables),
+por exemplo `https://www.clinica.com.br`, para o link da imagem usar o domínio certo.
+Depois de publicar, teste o link no WhatsApp; ele guarda a prévia antiga em cache por um tempo.
+
 ## Antes de publicar
 
 - As fotos e vídeos desta versão são **ilustrativos, gerados por IA**, e não representam o espaço real da clínica.
