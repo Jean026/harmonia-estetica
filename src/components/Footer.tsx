@@ -14,14 +14,17 @@ export default function Footer() {
   const a = clinic.address;
   return (
     <footer className="relative overflow-hidden bg-cocoa text-pearl/80">
-      {/* textura de mármore dourado sob um véu marrom, para manter a leitura */}
+      {/* mármore dourado visível, com um véu marrom que escurece de cima para baixo só para garantir a leitura */}
       <ImageSlot
         src={images.footer}
         alt=""
         sizes="100vw"
-        className="!absolute inset-0 h-full w-full opacity-40 mix-blend-soft-light"
+        className="!absolute inset-0 h-full w-full"
       />
-      <div className="absolute inset-0 bg-cocoa/80" aria-hidden />
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-cocoa/45 via-cocoa/70 to-cocoa/92"
+        aria-hidden
+      />
       <div className="relative mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 md:grid-cols-[1.3fr_0.7fr_1fr]">
         <div>
           <Logo light />
@@ -65,10 +68,11 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-pearl/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-pearl/55 sm:flex-row sm:px-8">
-          <p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-6 text-xs text-pearl/80 sm:flex-row sm:px-8">
+          {/* pr-16 no celular: o botão flutuante do WhatsApp não cobre o texto */}
+          <p className="pr-16 sm:pr-0">
             © {year} Harmonia Estética Avançada. Todos os direitos reservados.
-            <span className="ml-2 text-pearl/40">Imagens ilustrativas.</span>
+            <span className="ml-2 text-pearl/65">Imagens ilustrativas.</span>
           </p>
           {developerCredit.label && (
             <p>
